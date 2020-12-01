@@ -1,0 +1,58 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  margin: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+#tips {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.example {
+  padding-bottom: 2em;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 1em;
+  background-color: #ff0077;
+  color: white;
+  padding: 0.05rem 1rem;
+  margin: 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+
+.style1 {
+  background-color: palevioletred;
+  color: white;
+}
+
+.style2 {
+  background-color: #ff0077;
+  color: white;
+}

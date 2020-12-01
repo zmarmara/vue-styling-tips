@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Styling Techniques</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Styling Techniques</h1>
+    </header>
+    <section id="tips">
+      <!-- 1) The data property 'userInput' takes the value of the user input. This value is then assigned as a class to the input with dynamic styling. -->
+      <div class="example">
+        <p>1. Change class as you type (type 'style1' or 'style2'):</p>
+        <input
+          type="text"
+          :class="userInput"
+          v-on:input="setClassToInput($event)"
+        />
+      </div>
+
+      <!-- 2) The !this is used to toggle styles for the input. -->
+      <div class="example">
+        <p>2. Click to toggle class:</p>
+        <button
+          v-on:click="toggleParagraph"
+          v-bind:class="isVisible?style1:style2"
+        >
+          Click to toggle Style
+        </button>
+      </div>
+
+      <!-- 3) The conditional (ternary) operator is used to assign a class, depending on the  -->
+      <div class="example">
+        <p>3. Type any color to style the button:</p>
+        <input type="text" v-on:input="setClassToInput($event)" />
+        <button v-bind:style="{backgroundColor:userInput}">Style me!</button>
+      </div>
+    </section>
+  </body>
+</html>
